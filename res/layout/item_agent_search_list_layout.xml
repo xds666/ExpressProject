@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+   android:layout_height="58dp"
+    android:background="@drawable/list_bg"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:paddingBottom="25dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="25dp" >
+
+    <TextView
+        android:id="@+id/tv_agent_item_expressname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:text="快递"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_16_sp" />
+
+    <LinearLayout
+        android:id="@+id/tv_agent_item_time_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_agent_item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="9月18日"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_12_sp" />
+
+        <TextView
+            android:id="@+id/tv_agent_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="1dp"
+            android:text="9月18日"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_12_sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_agent_item_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:text="收件"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_16_sp"
+        android:visibility="gone" />
+</RelativeLayout>

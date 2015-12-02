@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="project_color_bg">#e2ebbf</color>
+    <color name="delete_color_bg">#e0b23f</color>
+
+       <!--oter-->
+    <color name="white">#ffffff</color>
+    <color name="transparent_white">#e6ffffff</color>
+    <color name="black">#000000</color>
+    <color name="light_black">#b4000000</color>
+    <color name="gray">#8e8e93</color>
+    <color name="red">#ff0000</color>
+    <color name="blue">#0000ff</color>
+    <color name="orange">#e08a52</color>
+    <color name="green">#3cbec3</color>
+    <color name="light_green">#18b423</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_10">#22000000</color>
+    <color name="yellow">#F7D94C</color>
+    <color name="deep_yellow">#e0b23f</color>
+    <color name="purple">#B992FF</color>
+    <color name="slign_green">#67C895</color>
+    <color name="green_blue">#4EC5C7</color>
+    
+    <!-- 文帆的 -->
+    <color name="tab_title_normal_color">#16982b</color>
+    <color name="tab_title_pressed_color">#EE9A49</color>
+    <color name="high_backgroundcolor">#4FC087</color>
+    <color name="normal_backgroundcolor">#96DDAB</color>
+    <color name="small_backgroundcolor">#C6ECC5</color>
+    <color name="orange_backgroundcolor">#FFCC99</color>
+    <color name="green_line">#4FC087</color>
+    <color name="orange_line">#FFCC99</color>
+    <color name="dotted_line">#C6ECC5</color>
+    <color name="backgroundcolor">#F4FAF6</color>
+    <color name="green_button">#4FC087</color>
+    <color name="orange_button">#FFCC99</color>
+    <color name="select_green_button">#3EAC75</color>
+    <color name="select_orange_button">#FFB871</color>
+    <color name="green_before">#E7F8E7</color>
+    <color name="green_after">#DBF4DB</color>
+    <color name="title_color">#EAF4ED</color>
+    <color name="title_unforcus_color">#999999</color>
+    <color name="title_forcus_color">#4FC087</color>
+    <color name="selected_bgcolor">#C6ECC5</color>
+    <color name="deep_green">#96DDAB</color>
+    <color name="simple_green">#C6ECC5</color>
+    <color name="ClickBefore">#C6ECC5</color>
+    <color name="ClickBack">#96DDAB</color>
+    <color name="title">#EAF4ED</color>
+ <!-- 标题栏颜色 -->
+    <color name="title_text">#000000</color>
+    <color name="b">#999999</color>
+    <color name="itme">#C6ECC5</color>
+    <color name="itme_change">#fff</color>
+    <color name="line">#C6ECC5</color>
+ <!-- 绿色的线,浅绿 -->
+<!--     <color name="gray">#999999</color> -->
+ <!-- 灰色 -->
+    <color name="orong">#FFCC99</color>
+ <!-- 橙色字和线 -->
+    <color name="greenText">#4FC087</color>
+ <!-- 绿色字线 ,深绿 -->
+    <color name="mingreen">#96DDAB</color>
+<!-- 标题栏 ,灰色 -->
+	<color name="grey">#D7D7D7</color>
+    
+</resources>

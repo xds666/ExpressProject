@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register3" >
+
+  <RelativeLayout
+       android:layout_width="fill_parent"
+       android:layout_height="50dp"
+       android:id="@+id/tab1"
+       >
+       <ImageView
+           android:layout_height="wrap_content"
+           android:layout_width="wrap_content"
+           android:background="@drawable/u6"
+           android:layout_centerVertical="true"
+           android:id="@+id/back"
+           />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_toRightOf="@+id/back"
+           android:text="@string/register"
+           android:layout_centerVertical="true"
+           android:textSize="20sp" />
+
+	</RelativeLayout>
+
+  <EditText
+       android:id="@+id/name"
+       android:layout_height="wrap_content"
+       android:layout_width="wrap_content"
+       android:hint="姓名"
+       android:layout_below="@+id/tab1"
+       android:layout_centerHorizontal="true"
+       android:background="@drawable/phone_number"
+       android:layout_marginTop="15dp"
+       />
+   
+	  <EditText
+       android:id="@+id/school"
+       android:layout_height="wrap_content"
+       android:layout_width="wrap_content"
+       android:hint="学校"
+       android:layout_below="@+id/name"
+       android:layout_centerHorizontal="true"
+       android:background="@drawable/phone_number"
+       android:layout_marginTop="15dp"
+       android:layout_alignLeft="@+id/name"
+       />
+	  
+	   <EditText
+       android:id="@+id/office"
+       android:layout_height="wrap_content"
+       android:layout_width="wrap_content"
+       android:hint="宿舍号/办公室"
+       android:layout_below="@+id/school"
+       android:layout_centerHorizontal="true"
+       android:background="@drawable/phone_number"
+       android:layout_marginTop="15dp"
+       android:layout_alignLeft="@+id/name"
+       />
+	   
+	    <EditText
+       android:id="@+id/number"
+       android:layout_height="wrap_content"
+       android:layout_width="wrap_content"
+       android:hint="学号"
+       android:layout_below="@+id/office"
+       android:layout_centerHorizontal="true"
+       android:background="@drawable/phone_number"
+       android:layout_marginTop="15dp"
+       android:layout_alignLeft="@+id/name"
+       />
+	    
+	     <Button
+	      android:layout_height="wrap_content"
+           android:layout_width="wrap_content"
+           android:background="@drawable/next_button_shape"
+           android:hint="进入软件"
+           android:layout_below="@+id/number"
+           android:layout_marginTop="15dp"
+           android:id="@+id/enter"
+           android:layout_alignLeft="@+id/name"
+           android:layout_centerHorizontal="true"
+           android:textColor="#ffffff"
+	      />
+	     
+	     <TextView
+	           android:layout_height="wrap_content"
+           		android:layout_width="wrap_content"
+           		android:text="点击查看用户协议"
+           		android:layout_centerHorizontal="true"
+           		android:layout_below="@+id/enter"
+	         />
+</RelativeLayout>

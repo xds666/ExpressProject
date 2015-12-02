@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">小地鼠</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_register">Register</string>
+    <string name="register">注册</string>
+    <string name="phonenumber">手机号码</string>
+    <string name="message_check_number">短信验证码</string>
+    <string name="next">下一步</string>
+    <string name="get">获取</string>
+    <string name="title_activity_register2">Register2</string>
+    <string name="password1">密码</string>
+    <string name="password2">确认密码</string>
+    <string name="title_activity_register3">Register3</string>
+    <string name="setting">设置</string>
+    <string name="input_name_txt">姓名：</string>
+    <string name="input_phone_txt">手机号：</string>
+    <string name="input_place_txt">宿舍号/办公室：</string>
+    <string name="express_company">快递公司</string>
+    <string name="input_tip">(如果信息有误，请及时修改)</string>
+    <string name="btn_submit_txt">提交</string>
+    <string name="title_activity_setting_general">Setting_general</string>
+    <string name="title_activity_setting_remind">Setting_remind</string>
+    <string name="title_activity_setting_safe">Setting_safe</string>
+    <string name="title_activity_setting_safe_next">Setting_safe_next</string>
+    <string name="title_activity_setting_about">Setting_about</string>
+
+    <!-- 当前快递 -->
+    <string name="CurrentExpress">当前快递</string>
+    <string name="CurrentExpressInfo">快递信息</string>
+    <string name="picking_title_tip">填写收件信息</string>
+    <string name="picking_title_warm_tip">注意,默认自己拿</string>
+    <string name="picking_way">领取方式</string>
+    <!-- 寄件功能 -->
+    <string name="shipping_search_other">查看其它寄件情况</string>
+    <string name="shipping_title_tip">填写上门收件信息</string>
+    <string name="shipping_title_warm_tip">注意，支付方式为当面支付</string>
+    <string name="shipping_arrive_time">上门时间</string>
+    <!-- 代收 -->
+    <string name="agent_title_txt">查看代收情况</string>
+    <string name="agent_tip_txt">请填写代收信息</string>
+    <string name="agent_tip_warm_txt">注意，我们将以短信方式通知代收人</string>
+    <string name="agent_personal_msg">代收人信息</string>
+    <string name="title_activity_search_agent_other">SearchAgentOtherActivity</string>
+
+    <!-- 历史记录 -->
+    <string name="record_tip_txt">注意，默认是五星好评</string>
+    <string name="record_evaluate_time">派件时间</string>
+    <string name="record_evaluate_express_msg">快递信息</string>
+    <string name="record_evaluate_express_man">派件员</string>
+    <string name="record_evaluate_grade">服务评价</string>
+    <string name="record_advise_tip">有什么更好的建议</string>
+    <string name="record_advise_thanks_tip">谢谢您的支持和配合！</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="title_activity_current_express_menu">CurrentExpressMenuActivity</string>
+    <string name="title_activity_current_express_info">CurrentExpressInfoActivity</string>
+
+    <!-- 设置与注册 -->
+
+    <string name="title_activity_index">Index</string>
+    <string name="title_activity_setting">SettingActivity</string>
+
+</resources>

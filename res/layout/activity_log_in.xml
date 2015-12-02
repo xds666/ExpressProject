@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogIn" >
+
+   
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        />
+    <TextView
+        android:id="@+id/denglu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="小地鼠登陆" 
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"		
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+          android:id="@+id/phonenumber"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:layout_below="@+id/denglu"
+          android:hint="手机号码"
+          android:background="@drawable/shape"
+          android:layout_marginTop="15dp"
+        />
+    
+     <EditText
+          android:id="@+id/password"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:layout_below="@+id/phonenumber"
+          android:layout_marginTop="6dp"
+          android:hint="密码"
+          android:inputType="textPassword"
+          android:background="@drawable/shape"
+        />
+     
+     <Button
+         android:id="@+id/submit"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:text="登陆"
+          android:layout_below="@+id/password"
+          android:layout_marginTop="15dp"
+          android:background="@drawable/next_button_shape"
+          android:textColor="#ffffff"
+         />
+     
+     <Button
+         android:id="@+id/signin"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:text="注册"
+          android:layout_below="@+id/submit"
+          android:background="@drawable/selector_signin"
+          android:layout_marginTop="6dp"
+         />
+     <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/signin"
+          android:layout_alignLeft="@+id/submit"
+          android:layout_marginTop="5dp"
+         >
+         <ImageView
+              android:id="@+id/safe"
+              android:layout_width="wrap_content"
+          	  android:layout_height="wrap_content"
+          	  android:src="@drawable/safe"        	  
+          />
+         <TextView
+             android:id="@+id/forgetPassword"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="忘记密码？"
+             android:layout_toRightOf="@+id/safe"
+             android:layout_marginLeft="5dp"
+             />
+     </RelativeLayout>
+</RelativeLayout>
