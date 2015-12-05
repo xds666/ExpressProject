@@ -140,9 +140,9 @@ public class MainActivity extends FragmentActivity{
 //            	text1.setTextColor(SelectedColor);
 //                text3.setTextColor(UnSelectedColor);
 //                text2.setTextColor(UnSelectedColor);
-            	rl1.setBackgroundColor(Selected_bgcolor);
-            	rl2.setBackgroundColor(white);
-            	rl3.setBackgroundColor(white);
+//          	rl1.setBackgroundColor(Selected_bgcolor);
+//            	rl2.setBackgroundColor(white);
+//            	rl3.setBackgroundColor(white);
                 if (currIndex == 1) {
                     animation = new TranslateAnimation(one, 0, 0, 0);
                     
@@ -155,9 +155,9 @@ public class MainActivity extends FragmentActivity{
 //            	rl2.setTextColor(SelectedColor);
 //                rl3.setTextColor(UnSelectedColor);
 //                rl1.setTextColor(UnSelectedColor);
-                rl2.setBackgroundColor(Selected_bgcolor);
-                rl3.setBackgroundColor(white);
-                rl1.setBackgroundColor(white);
+//                rl2.setBackgroundColor(Selected_bgcolor);
+//                rl3.setBackgroundColor(white);
+//                rl1.setBackgroundColor(white);
                 if (currIndex == 0) {
                     animation = new TranslateAnimation(offset, one, 0, 0);
                 } else if (currIndex == 2) {
@@ -168,9 +168,9 @@ public class MainActivity extends FragmentActivity{
 //            	rl3.setTextColor(SelectedColor);
 //                rl1.setTextColor(UnSelectedColor);
 //                rl2.setTextColor(UnSelectedColor);
-            	rl3.setBackgroundColor(Selected_bgcolor);
-                rl1.setBackgroundColor(white);
-                rl2.setBackgroundColor(white);
+//            	rl3.setBackgroundColor(Selected_bgcolor);
+//                rl1.setBackgroundColor(white);
+//                rl2.setBackgroundColor(white);
                 if (currIndex == 0) {
                     animation = new TranslateAnimation(offset, two, 0, 0);
                 } else if (currIndex == 1) {
