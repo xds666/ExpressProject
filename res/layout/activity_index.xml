@@ -7,13 +7,22 @@
     <RelativeLayout 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="5"/>
+        android:layout_weight="5">
+        <TextView 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="小地鼠快递"
+            android:textSize="16sp"/>
+    </RelativeLayout>
     
     <LinearLayout 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="3"
-        android:orientation="vertical">"
+        android:orientation="vertical">
         
         <LinearLayout 
             android:layout_width="match_parent"
@@ -21,6 +30,7 @@
             android:layout_weight="1"
             android:orientation="horizontal">
             <RelativeLayout 
+                android:id="@+id/send_rl"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -33,6 +43,7 @@
                     android:textSize="20sp"/>
             </RelativeLayout>
             <RelativeLayout 
+                android:id="@+id/stepped_rl"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -44,7 +55,7 @@
                     android:text="代收"
                     android:textSize="20sp"/>
             </RelativeLayout>
-        </LinearLayout>"
+        </LinearLayout>
         
         <LinearLayout 
             android:layout_width="match_parent"
@@ -52,6 +63,7 @@
             android:layout_weight="1"
             android:orientation="horizontal">
             <RelativeLayout 
+                android:id="@+id/history_rl"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -64,6 +76,7 @@
                     android:textSize="20sp"/>
             </RelativeLayout>
             <RelativeLayout 
+                android:id="@+id/price_query_rl"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -83,6 +96,7 @@
             android:layout_weight="1"
             android:orientation="horizontal">
             <RelativeLayout 
+                android:id="@+id/service_rl"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -95,6 +109,7 @@
                     android:textSize="20sp"/>
             </RelativeLayout>
             <RelativeLayout 
+                android:id="@+id/company_query_rl"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"

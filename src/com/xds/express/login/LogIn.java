@@ -14,6 +14,7 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.xds.express.R;
+import com.xds.express.activity.MainActivity;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -49,7 +50,8 @@ public class LogIn extends Activity {
 			switch(msg.what){
 			case 0:
 				progress.dismiss();
-				Toast.makeText(LogIn.this, "��½�ɹ�", Toast.LENGTH_SHORT).show();
+				Toast.makeText(LogIn.this, "test", Toast.LENGTH_SHORT).show();
+				
 				break;
 			case 1:
 				break;
@@ -86,9 +88,9 @@ public class LogIn extends Activity {
 			
 				
 				if(TextUtils.isEmpty(phonenumber.getText().toString())||TextUtils.isEmpty(password.getText().toString())){
-					Toast.makeText(LogIn.this, "�ֻ���������벻��Ϊ��", Toast.LENGTH_SHORT).show();
+					Toast.makeText(LogIn.this, "用户名或密码不能为空", Toast.LENGTH_SHORT).show();
 				}else{
-					progress = ProgressDialog.show(LogIn.this, "�Ի���", "��¼��......");
+					progress = ProgressDialog.show(LogIn.this, "test", "登录中");
 			//		new Login(phonenumber.getText().toString(), password.getText().toString()).start();
 					asyncHttpClientRequest(phonenumber.getText().toString(), password.getText().toString());
 				}

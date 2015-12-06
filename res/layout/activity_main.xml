@@ -1,5 +1,4 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:a="http://schemas.android.com/apk/res/com.xds.express"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
@@ -36,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_centerInParent="true"
-                android:background="@drawable/home"/>
+                android:background="@drawable/index"/>
         </RelativeLayout>
         
         <RelativeLayout 
@@ -48,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_centerInParent="true"
-                android:background="@drawable/menu2"/>
+                android:background="@drawable/message"/>
         </RelativeLayout>
         
         <RelativeLayout
@@ -61,62 +60,9 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_centerInParent="true"
-                android:background="@drawable/setting1"/>
+                android:background="@drawable/setting"/>
         </RelativeLayout>
-    </LinearLayout>"
+    </LinearLayout>
     
-    
-    
-    
-    <!-- <android.support.v4.view.ViewPager
-        android:id="@+id/id_viewpager"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@color/backgroundcolor" >
-    </android.support.v4.view.ViewPager>
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="2dp"
-        android:background="@color/green_button"
-        />
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="60dp"
-        android:background="@color/backgroundcolor"
-        android:orientation="horizontal" >
-
-       <com.xds.express.ChangeColorIconWithTextView
-            android:id="@+id/id_indicator_one"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:padding="5dp"
-            a:icon="@drawable/home"
-            a:text="首页"
-            a:text_size="12sp" />
-
-        <com.xds.express.ChangeColorIconWithTextView
-            android:id="@+id/id_indicator_two"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:padding="5dp"
-            a:icon="@drawable/menu1"
-            a:text="消息"
-           a:text_size="12sp" />
-
-        <com.xds.express.ChangeColorIconWithTextView
-            android:id="@+id/id_indicator_three"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:padding="5dp"
-            a:icon="@drawable/setting1"
-            a:text="设置"
-            a:text_size="12sp" />
-
-    </LinearLayout> -->
 
 </RelativeLayout>
