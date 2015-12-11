@@ -43,11 +43,13 @@
              
              <TextView
       			 android:id="@+id/status_tv"
-       			 android:layout_width="wrap_content"
+       			 android:layout_width="150dp"
        			 android:layout_height="wrap_content"
        			 android:layout_alignParentRight="true"
                  android:layout_marginTop="40dp"
+                 android:gravity="center"
                  android:text="status"
+                 android:background="@color/project_color_bg"
                  android:textSize="24sp" />
              
    			 <TextView
@@ -134,7 +136,7 @@
                  android:id="@+id/time_rl"
                  android:layout_height="70dp"
                  android:layout_width="fill_parent"
-                 android:background="#808080"
+                 android:background="@color/project_color_bg"
                  android:layout_below="@+id/dorm_tv">
                  
                  <TextView
@@ -143,7 +145,7 @@
                      android:layout_width="wrap_content"
                      android:layout_marginLeft="30dp"
                      android:layout_centerVertical="true"
-                     android:text="@string/input_name_txt"
+                     android:text="@string/arrive_time"
                      android:textSize="20sp"/>
          
                  <ImageView 
@@ -170,7 +172,7 @@
    			       android:id="@+id/pick_way_rl"
    			       android:layout_width="fill_parent"
    			       android:layout_height="70dp"
-   			       android:background="#808080"
+   			       android:background="@color/project_color_bg"
    			       android:layout_below="@+id/time_rl">
                  
          

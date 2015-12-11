@@ -18,6 +18,7 @@
     <string name="input_name_txt">姓名：</string>
     <string name="input_phone_txt">手机号：</string>
     <string name="input_place_txt">宿舍号/办公室：</string>
+    <string name="arrive_time">上门时间</string>
     <string name="express_company">快递公司</string>
     <string name="input_tip">(如果信息有误，请及时修改)</string>
     <string name="btn_submit_txt">提交</string>
@@ -37,7 +38,7 @@
     <string name="shipping_search_other">查看其它寄件情况</string>
     <string name="shipping_title_tip">填写上门收件信息</string>
     <string name="shipping_title_warm_tip">注意，支付方式为当面支付</string>
-    <string name="shipping_arrive_time">上门时间</string>
+    
     <!-- 代收 -->
     <string name="agent_title_txt">查看代收情况</string>
     <string name="agent_tip_txt">请填写代收信息</string>

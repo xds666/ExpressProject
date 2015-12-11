@@ -54,7 +54,7 @@ public class IndexActivity extends Activity implements OnClickListener {
 		// TODO 自动生成的方法存根
 		switch (v.getId()) {
 		case R.id.send_rl:
-			startActivity(new Intent(IndexActivity.this,ShippingActivity.class));
+			startActivity(new Intent(IndexActivity.this,ShippingSeeActivity.class));
 			break;
 		case R.id.stepped_rl:
 			startActivity(new Intent(IndexActivity.this,ShippingRecordActivity.class));

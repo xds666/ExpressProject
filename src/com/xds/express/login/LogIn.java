@@ -90,9 +90,11 @@ public class LogIn extends Activity {
 				if(TextUtils.isEmpty(phonenumber.getText().toString())||TextUtils.isEmpty(password.getText().toString())){
 					Toast.makeText(LogIn.this, "用户名或密码不能为空", Toast.LENGTH_SHORT).show();
 				}else{
-					progress = ProgressDialog.show(LogIn.this, "test", "登录中");
+					progress = ProgressDialog.show(LogIn.this, "test", "登录中....");
 			//		new Login(phonenumber.getText().toString(), password.getText().toString()).start();
-					asyncHttpClientRequest(phonenumber.getText().toString(), password.getText().toString());
+			//		asyncHttpClientRequest(phonenumber.getText().toString(), password.getText().toString());
+					Log.i("username", phonenumber.getText().toString());
+					Log.i("password", password.getText().toString());
 				}
 				
 			}
@@ -109,30 +111,32 @@ public class LogIn extends Activity {
 		
 	}
 	
-	public void asyncHttpClientRequest(String username, String password){
-		AsyncHttpClient client = new AsyncHttpClient();
-	
-		RequestParams params = new RequestParams();
-		params.put("username", username);
-		params.put("password", password);
-		
-		client.post(url, params, new AsyncHttpResponseHandler() {
-			
-			@Override
-			public void onSuccess(int arg0, Header[] arg1, byte[] arg2) {
-				
-				Log.i("��������", new String(arg2));
-				progress.dismiss();
-			}
-			
-			@Override
-			public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-			
-				progress.dismiss();
-				Toast.makeText(LogIn.this, "��������ʧ�ܣ����Ժ�����", Toast.LENGTH_SHORT).show();
-			}
-		});
-	}
+//	public void asyncHttpClientRequest(String username, String password){
+//		AsyncHttpClient client = new AsyncHttpClient();
+//	
+//		RequestParams params = new RequestParams();
+//		params.put("username", username);
+//		params.put("password", password);
+//		
+//		client.post(url, params, new AsyncHttpResponseHandler() {
+//			
+//			@Override
+//			public void onSuccess(int arg0, Header[] arg1, byte[] arg2) {
+//				
+//				Log.i("��������", new String(arg2));
+//				progress.dismiss();
+//				//startActivity(new Intent(LogIn.this,MainActivity.class));
+//			}
+//			
+//			@Override
+//			public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
+//			
+//				progress.dismiss();
+//				Toast.makeText(LogIn.this, "��������ʧ�ܣ����Ժ�����", Toast.LENGTH_SHORT).show();
+//				startActivity(new Intent(LogIn.this,MainActivity.class));
+//			}
+//		});
+//	}
 	
 	/*
 	class Login extends Thread{
