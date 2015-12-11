@@ -5,8 +5,8 @@
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry kind="lib" path="D:/eclipse-jee-luna-R-win32-x86_64/workspace/ExpressProject/libs/android-async-http-1.4.5.jar"/>
-	<classpathentry kind="lib" path="D:/eclipse-jee-luna-R-win32-x86_64/workspace/ExpressProject/libs/fastjson-1.2.2.jar"/>
-	<classpathentry kind="lib" path="D:/eclipse-jee-luna-R-win32-x86_64/workspace/ExpressProject/libs/android-async-http-1.4.7.jar"/>
+	<classpathentry kind="lib" path="libs/fastjson-1.2.2.jar"/>
+	<classpathentry kind="lib" path="libs/jsoup-1.8.2.jar"/>
+	<classpathentry kind="lib" path="libs/android-async-http-1.4.5.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
