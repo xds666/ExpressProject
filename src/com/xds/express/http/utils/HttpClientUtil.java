@@ -20,6 +20,7 @@ import com.xds.express.http.interfaces.ServerListener;
 public class HttpClientUtil {
 
     //Base
+	private String TAG = "HttpClientUtil";
     private static final int TIME_OUT = 15000;
     public static AsyncHttpClient mClient;
     private ServerListener executeListener;//请求执行监听器
