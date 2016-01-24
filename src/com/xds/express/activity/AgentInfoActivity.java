@@ -10,7 +10,7 @@ import com.xds.express.R;
  * create time 2015年11月18日下午9:23:53
  * 代收快递详情
  */
-public class AgentInfoActivity extends Activity{
+public class AgentInfoActivity extends BaseActivity{
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

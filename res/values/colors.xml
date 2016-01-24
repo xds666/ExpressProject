@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    
+
     <color name="project_color_bg">#e2ebbf</color>
     <color name="delete_color_bg">#e0b23f</color>
+    <color name="driver_line_color">#dadada</color>
 
-       <!--oter-->
+    <!-- oter -->
     <color name="white">#ffffff</color>
     <color name="transparent_white">#e6ffffff</color>
     <color name="black">#000000</color>
@@ -22,7 +23,7 @@
     <color name="purple">#B992FF</color>
     <color name="slign_green">#67C895</color>
     <color name="green_blue">#4EC5C7</color>
-    
+
     <!-- 文帆的 -->
     <color name="tab_title_normal_color">#16982b</color>
     <color name="tab_title_pressed_color">#EE9A49</color>
@@ -49,21 +50,21 @@
     <color name="ClickBefore">#C6ECC5</color>
     <color name="ClickBack">#96DDAB</color>
     <color name="title">#EAF4ED</color>
- <!-- 标题栏颜色 -->
+    <!-- 标题栏颜色 -->
     <color name="title_text">#000000</color>
     <color name="b">#999999</color>
     <color name="itme">#C6ECC5</color>
     <color name="itme_change">#fff</color>
     <color name="line">#C6ECC5</color>
- <!-- 绿色的线,浅绿 -->
-<!--     <color name="gray">#999999</color> -->
- <!-- 灰色 -->
+    <!-- 绿色的线,浅绿 -->
+    <!-- <color name="gray">#999999</color> -->
+    <!-- 灰色 -->
     <color name="orong">#FFCC99</color>
- <!-- 橙色字和线 -->
+    <!-- 橙色字和线 -->
     <color name="greenText">#4FC087</color>
- <!-- 绿色字线 ,深绿 -->
+    <!-- 绿色字线 ,深绿 -->
     <color name="mingreen">#96DDAB</color>
-<!-- 标题栏 ,灰色 -->
-	<color name="grey">#D7D7D7</color>
-    
+    <!-- 标题栏 ,灰色 -->
+    <color name="grey">#D7D7D7</color>
+
 </resources>

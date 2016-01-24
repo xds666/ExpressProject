@@ -16,7 +16,7 @@ import com.xds.express.R;
  * create time 2015年11月17日下午10:12:41
  * 寄件Activity
  */
-public class ShippingActivity extends Activity implements OnClickListener{
+public class ShippingActivity extends BaseActivity implements OnClickListener{
 	
 	//View
 	private TextView searchOther;

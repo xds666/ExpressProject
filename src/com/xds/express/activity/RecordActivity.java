@@ -20,7 +20,7 @@ import com.xds.express.widget.ListViewCompat;
  * create time 2015年11月18日下午9:50:34
  * 历史记录首页
  */
-public class RecordActivity extends Activity{
+public class RecordActivity extends BaseActivity{
 	
 	private ListViewCompat listView;
 	private RecordAdapter adapter;
@@ -38,6 +38,7 @@ public class RecordActivity extends Activity{
 	}
 	
 	private void initView(){
+		setTitle("历史记录");
 		listView = (ListViewCompat) findViewById(R.id.lv_record_index);
 		//测试数据
 		for (int i = 0; i < 4; i++) {

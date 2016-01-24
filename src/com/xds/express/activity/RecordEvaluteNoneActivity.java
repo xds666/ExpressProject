@@ -10,7 +10,7 @@ import com.xds.express.R;
  * create time 2015年11月18日下午11:30:09
  * 未评论
  */
-public class RecordEvaluteNoneActivity extends Activity{
+public class RecordEvaluteNoneActivity extends BaseActivity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub

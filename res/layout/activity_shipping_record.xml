@@ -6,7 +6,7 @@
 
     <com.xds.express.widget.ListViewCompat
         android:id="@+id/lv_shipping_record"
-         android:layout_width="match_parent"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@null"
         android:cacheColorHint="#00000000"

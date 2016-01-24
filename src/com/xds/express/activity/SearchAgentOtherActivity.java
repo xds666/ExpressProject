@@ -13,7 +13,7 @@ import com.xds.express.widget.ListViewCompat;
 import com.xds.express.widget.SlideMessage;
 import com.xds.express.widget.SlideView;
 
-public class SearchAgentOtherActivity extends Activity {
+public class SearchAgentOtherActivity extends BaseActivity {
 
 	private ListViewCompat listView;
 	private List<AgentSearchAdapter.AgentSearchMessage> data = new ArrayList<AgentSearchAdapter.AgentSearchMessage>();

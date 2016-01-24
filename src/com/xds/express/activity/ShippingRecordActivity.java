@@ -20,7 +20,7 @@ import com.xds.express.widget.ListViewCompat;
 /**
  * @author Wusy create time 2015年11月17日下午10:25:02 查看寄件记录
  */
-public class ShippingRecordActivity extends Activity {
+public class ShippingRecordActivity extends BaseActivity {
 
 	// View
 	private ListViewCompat listView;
@@ -37,6 +37,7 @@ public class ShippingRecordActivity extends Activity {
 	}
 
 	private void initView() {
+		setTitle("代收");
 		listView = (ListViewCompat) findViewById(R.id.lv_shipping_record);
 		// 测试数据
 		for (int i = 0; i < 10; i++) {

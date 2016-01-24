@@ -10,13 +10,14 @@ import com.xds.express.R;
  * create time 2015年11月17日下午10:40:05
  * 查看寄件详情
  */
-public class ShippingSeeActivity extends Activity{
+public class ShippingSeeActivity extends BaseActivity{
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_shipping_see);
+		setTitle("寄件");
 	}
 
 }

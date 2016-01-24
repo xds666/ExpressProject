@@ -14,9 +14,9 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class CurrentExpressInfoActivity extends Activity {
+public class CurrentExpressInfoActivity extends BaseActivity {
 	
-	private Button submit,back;
+	private Button submit;
 	TextView status;
 	RelativeLayout time,pick_way;
 	
@@ -32,7 +32,6 @@ public class CurrentExpressInfoActivity extends Activity {
 
 	public void InitView() {
 		submit = (Button)findViewById(R.id.submit);
-		back  = (Button)findViewById(R.id.back);
 		status = (TextView)findViewById(R.id.status_tv);
 		time = (RelativeLayout)findViewById(R.id.time_rl);
 	}
@@ -47,11 +46,6 @@ public class CurrentExpressInfoActivity extends Activity {
 	
 	
 	private void InitListener(){
-		back.setOnClickListener(new OnClickListener() {
-			public void onClick(View v) {
-				finish();
-			}
-		});
 		time.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				// TODO 自动生成的方法存根

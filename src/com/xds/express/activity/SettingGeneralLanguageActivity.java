@@ -12,25 +12,15 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-public class SettingGeneralLanguageActivity extends Activity {
+public class SettingGeneralLanguageActivity extends BaseActivity {
 
-	ImageView back;
 	ListView list;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_setting_general_language);
-		back = (ImageView)findViewById(R.id.back);
 		list = (ListView)findViewById(R.id.language);
-		back.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO �Զ����ɵķ������
-				finish();
-			}
-		});
 	}
 
 	@Override

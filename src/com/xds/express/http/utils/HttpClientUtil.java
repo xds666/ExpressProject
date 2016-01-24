@@ -2,15 +2,15 @@ package com.xds.express.http.utils;
 
 import java.lang.reflect.Field;
 
-import org.json.JSONObject;
-
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.loopj.android.http.*;
-import com.xds.express.http.interfaces.ServerListener;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
+import com.xds.express.http.HttpResponseResult;
 
 
 /**
@@ -21,17 +21,9 @@ public class HttpClientUtil {
 
     //Base
     private static final int TIME_OUT = 15000;
-    public static AsyncHttpClient mClient;
-    private ServerListener executeListener;//请求执行监听器
+    private static AsyncHttpClient mClient;
 
-    private boolean isshowDialog = false;//是否显示dialog
-
-    private Context context;
-    private ProgressDialog progressDialog;//网络请求dialog
-    private String URL = "";//请求地址
-    private String type = "";//请求类型
-
-    public static AsyncHttpClient checkHttpClient() {
+    private  static AsyncHttpClient checkHttpClient() {
         if (mClient == null) {
             mClient = new AsyncHttpClient();
             mClient.setTimeout(TIME_OUT);
@@ -39,35 +31,31 @@ public class HttpClientUtil {
         return mClient;
     }
 
-    public static void httpPost(Context contxt, String url, String type, Object obj, ServerListener listener) {
-        if (obj == null) {
-            listener.onServerFinish(type);
-            return;
-        }
+    public static void httpPost(Context contxt, String url, Object obj, HttpResponseResult listener) {
+    
         if (!NetWorkUtil.isNetWorkConnected()) {
             Toast.makeText(contxt, "当前无网络状态，请稍后尝试！", Toast.LENGTH_SHORT);
             return;
         }
-        Log.i("wsy http", "Type: " + type);
         Log.i("wsy http", "request url: " + url);
         //checkHttpClient();
-        post(contxt, url, type, obj, listener);
+        post(contxt, url,obj, listener);
     }
 
-    public static void post(Context context, String url, final String type, Object obj, final ServerListener listener) {
+    private static void post(Context context, String url,Object obj, final HttpResponseResult listener) {
         RequestParams params = switchToParams(obj);
         checkHttpClient().post(context,url ,params, new AsyncHttpResponseHandler() {
 
             @Override
             public void onStart() {
                 super.onStart();
-                listener.startShowDialog();
+            	listener.onPreViewAction();
             }
 
             @Override
             public void onFinish() {
                 super.onFinish();
-                listener.stopDimissDialog();
+                listener.onAfterViewAction();
             }
 
            
@@ -75,47 +63,24 @@ public class HttpClientUtil {
 			public void onSuccess(String content) {
                 super.onSuccess(content);
                 Log.i("wsy http", "Rsp: " + content);
-                try {
-                    JSONObject jsonObject = new JSONObject(content);
-                    int rspResult = jsonObject.getInt("code");//请求码 200,表示成功响应
-                    String rspReason = jsonObject.getString("info");
-                    PagingResult pagingResult = new PagingResult();
-                    if (rspResult == 200) {
-                        if (listener != null) {
-                            listener.onServerComplete(true, type, content, pagingResult);
-                        }
-                    } else {
-                        if (listener != null) {
-                            listener.onServerComplete(false, type,
-                                    rspReason, null);
-                        }
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    if (listener != null) {
-                        listener.onServerException(type, e);
-                        Log.i("wsy http", " JSONException :" + e.toString());
-                    }
-                }
+                listener.HttpResultJson(content);
+                listener.onAfterViewAction();
             }
 
             @Override
             public void onFailure(Throwable error, String content) {
                 super.onFailure(error, content);
-                if (listener != null) {
-                    listener.onServerException(type, (Exception) error);
                     ((Exception) error).printStackTrace();
                     Log.i("wsy http", " onFailure :" + error.toString());
-
-                }
+                    listener.HttpResultJson(content);
+                    listener.onAfterViewAction();
             }
-
 
         });
     }
 
 
-    public static RequestParams switchToParams(Object obj) {
+    private static RequestParams switchToParams(Object obj) {
         RequestParams params = new RequestParams();
         //解析数据
         Field[] fields = obj.getClass().getFields();

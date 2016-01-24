@@ -16,9 +16,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-public class SettingSafeActivity extends Activity {
+public class SettingSafeActivity extends BaseActivity {
 
-	ImageView back;
 	int height,width;
 	EditText phoneNumber,checkNumber;
 	Button next,get;
@@ -28,15 +27,6 @@ public class SettingSafeActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_setting_safe);
-		back = (ImageView)findViewById(R.id.back);
-		back.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO �Զ����ɵķ������
-				finish();
-			}
-		});
 		phoneNumber = (EditText)findViewById(R.id.phonenumber);
 		checkNumber = (EditText)findViewById(R.id.check_number);
 		next = (Button)findViewById(R.id.next);

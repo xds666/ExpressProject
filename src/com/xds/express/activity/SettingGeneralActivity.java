@@ -17,27 +17,18 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-public class SettingGeneralActivity extends Activity {
+public class SettingGeneralActivity extends BaseActivity {
 
 	ListView language;
 	List<String> list;
-	ImageView back;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_setting_general);
 		language = (ListView)findViewById(R.id.general);
-		back = (ImageView)findViewById(R.id.back);
+	
 		language.setAdapter(new ArrayAdapter(this, android.R.layout.simple_expandable_list_item_1, initData()));
-		back.setOnClickListener(new OnClickListener() {
-					
-					@Override
-					public void onClick(View v) {
-						// TODO �Զ����ɵķ������
-						finish();
-					}
-				});
 	}
 
 	public List<String> initData(){

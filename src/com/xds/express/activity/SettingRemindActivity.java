@@ -20,9 +20,8 @@ import android.widget.TextView;
 import com.xds.express.R;
 import com.xds.express.widget.SwitchButton;
 
-public class SettingRemindActivity extends Activity {
+public class SettingRemindActivity extends BaseActivity {
 
-	ImageView back;
 	ListView listview;
 	ArrayList<String> data = new ArrayList<String>();
 	@Override
@@ -30,17 +29,8 @@ public class SettingRemindActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_setting_remind);
-		back = (ImageView)findViewById(R.id.back);
 		listview = (ListView)findViewById(R.id.remind);
 		initData();
-		back.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO �Զ����ɵķ������
-				finish();
-			}
-		});
 		
 		MyAdapter adapter = new MyAdapter(this);
 		listview.setAdapter(adapter);

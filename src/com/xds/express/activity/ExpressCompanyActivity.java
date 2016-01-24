@@ -16,7 +16,7 @@ import com.xds.express.adapter.ExpressCompanyAdapter;
  * create time 2015年11月19日下午9:58:52
  * 快递公司查询
  */
-public class ExpressCompanyActivity extends Activity{
+public class ExpressCompanyActivity extends BaseActivity{
 	
 	private ExpandableListView listView;
 	private ExpressCompanyAdapter adapter;
@@ -28,11 +28,11 @@ public class ExpressCompanyActivity extends Activity{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_express_company);
-		
+		setTitle("快递公司查询");
 		listView = (ExpandableListView) findViewById(R.id.express_index_listview);
 		listView.setGroupIndicator(null);
 		//测试数据
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 20; i++) {
 			ExpressMessage message = new ExpressMessage();
 			if (i%2==0) {
 				message.setExpressAddress("广州大学");

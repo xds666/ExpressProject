@@ -26,7 +26,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 
-public class SettingActivity extends Activity {
+public class SettingActivity extends BaseActivity {
 	ListView list1, list2;
 	List<String> initList1, initList2 = null;
 
@@ -34,7 +34,7 @@ public class SettingActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.activity_setting);
+		setContentView(R.layout.activity_setting,false);
 		list1 = (ListView) findViewById(R.id.list1);
 		list2 = (ListView) findViewById(R.id.list2);
 		

@@ -1,6 +1,6 @@
 package com.xds.express.http.utils;
 
-import com.xds.express.http.app.TestApplication;
+import com.xds.express.app.ExpressApplication;
 
 import android.R.integer;
 import android.content.Context;
@@ -19,7 +19,7 @@ public class NetWorkUtil {
 	 */
 	
 	private static ConnectivityManager getSysytemConnectivityManager() {
-		ConnectivityManager connectivityManager = (ConnectivityManager) TestApplication
+		ConnectivityManager connectivityManager = (ConnectivityManager) ExpressApplication
 				.getInstance().getSystemService(Context.CONNECTIVITY_SERVICE);
 		return connectivityManager;
 	}

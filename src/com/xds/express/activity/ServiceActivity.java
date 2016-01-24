@@ -10,12 +10,13 @@ import com.xds.express.R;
  * create time 2015年11月19日下午11:05:28
  * 客服界面
  */
-public class ServiceActivity extends Activity{
+public class ServiceActivity extends BaseActivity{
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_service);
+		setTitle("小地鼠客服");
 	}
 }

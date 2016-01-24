@@ -10,7 +10,7 @@ import com.xds.express.R;
  * create time 2015年11月19日下午9:13:54
  * 已经评价历史记录
  */
-public class RecordEvaluteActivity extends Activity{
+public class RecordEvaluteActivity extends BaseActivity{
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

@@ -17,11 +17,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-public class SettingSafeNextActivity extends Activity {
+public class SettingSafeNextActivity extends BaseActivity {
 
 	EditText password1,password2;
 	Button finish;
-	ImageView back;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -31,7 +30,6 @@ public class SettingSafeNextActivity extends Activity {
 		password1 = (EditText)findViewById(R.id.password1);
 		password2 = (EditText)findViewById(R.id.password2);
 		finish = (Button)findViewById(R.id.next);
-		back = (ImageView)findViewById(R.id.back);
 		
 		DisplayMetrics dm = getResources().getDisplayMetrics();
 		int width = dm.widthPixels;
@@ -45,14 +43,6 @@ public class SettingSafeNextActivity extends Activity {
 			public void onClick(View v) {
 				// TODO �Զ����ɵķ������
 				Toast.makeText(SettingSafeNextActivity.this, "δ�O��", Toast.LENGTH_SHORT).show();
-			}
-		});
-		back.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO �Զ����ɵķ������
-				finish();
 			}
 		});
 	}

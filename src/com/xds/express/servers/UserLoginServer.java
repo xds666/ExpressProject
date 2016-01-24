@@ -1,4 +1,4 @@
-package com.xds.express.http.server;
+package com.xds.express.servers;
 
 /*
  * 用户登陆服务的请求 响应类
@@ -10,6 +10,8 @@ public class UserLoginServer {
 	public String userphone;
 	public String password;
 	public String sign;
+	
+	public static String ADDRESS = "http://xiaodishu.coding.io/index.php/member/login/applogin";
 
 	
 	public UserLoginServer (String sign,String userphone,String password){

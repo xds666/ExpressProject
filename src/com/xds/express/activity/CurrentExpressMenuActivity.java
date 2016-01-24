@@ -24,7 +24,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 
-public class CurrentExpressMenuActivity extends Activity {
+public class CurrentExpressMenuActivity extends BaseActivity {
 
 private String[] company_name = {"申通"};
 	
@@ -39,7 +39,7 @@ private String[] company_name = {"申通"};
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_current_express_menu);
+		setContentView(R.layout.activity_current_express_menu,false);
 		Log.i("123", "123");
 		express_menu = (ListView) findViewById(R.id.express_menu);
 		initData();

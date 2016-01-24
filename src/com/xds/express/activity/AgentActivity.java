@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.xds.express.R;
 
-public class AgentActivity extends Activity {
+public class AgentActivity extends BaseActivity {
 
     private TextView searchOther;
 

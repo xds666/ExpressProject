@@ -15,27 +15,16 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-public class SettingAboutActivity extends Activity {
+public class SettingAboutActivity extends BaseActivity {
 
 	ListView about;
 	List<String> list;
-	ImageView back;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_setting_about);
-		back = (ImageView)findViewById(R.id.back);
 		about = (ListView)findViewById(R.id.about);
 		about.setAdapter(new ArrayAdapter(this, android.R.layout.simple_expandable_list_item_1, initData()));
-		back.setOnClickListener(new OnClickListener() {
-					
-					@Override
-					public void onClick(View v) {
-						// TODO �Զ����ɵķ������
-						finish();
-					}
-				});
 	}
 
 	public List<String> initData(){

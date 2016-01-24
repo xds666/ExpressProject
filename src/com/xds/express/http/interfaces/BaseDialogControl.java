@@ -10,7 +10,7 @@ public interface BaseDialogControl {
 	/*
 	 * Dialog show
 	 */
-	public void startShowDialog();
+	public void startShowDialog(String message);
 	
 	
 	/*
