@@ -1,4 +1,4 @@
-package com.xds.express.http.utils;
+package com.xds.express.utils;
 
 import com.xds.express.app.ExpressApplication;
 

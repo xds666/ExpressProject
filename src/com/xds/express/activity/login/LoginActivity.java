@@ -16,8 +16,8 @@ import com.loopj.android.http.RequestParams;
 import com.xds.express.R;
 import com.xds.express.activity.BaseActivity;
 import com.xds.express.activity.MainActivity;
+import com.xds.express.http.HttpClientUtil;
 import com.xds.express.http.HttpResponseResult;
-import com.xds.express.http.utils.HttpClientUtil;
 import com.xds.express.servers.UserLoginServer;
 
 import android.os.Bundle;

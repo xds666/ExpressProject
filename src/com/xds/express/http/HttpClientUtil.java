@@ -1,4 +1,4 @@
-package com.xds.express.http.utils;
+package com.xds.express.http;
 
 import java.lang.reflect.Field;
 
@@ -10,7 +10,7 @@ import android.widget.Toast;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
-import com.xds.express.http.HttpResponseResult;
+import com.xds.express.utils.NetWorkUtil;
 
 
 /**
