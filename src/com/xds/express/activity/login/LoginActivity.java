@@ -1,6 +1,7 @@
 package com.xds.express.activity.login;
 
 import java.io.IOException;
+import java.util.Map;
 
 import org.apache.http.Header;
 import org.apache.http.HttpResponse;
@@ -35,6 +36,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -42,6 +44,7 @@ public class LoginActivity extends BaseActivity {
 
 	Button sign, submit;
 	EditText phonenumber, password;
+	CheckBox saveInfo;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -52,19 +55,41 @@ public class LoginActivity extends BaseActivity {
 		sign = (Button) findViewById(R.id.login_signin);
 		phonenumber = (EditText) findViewById(R.id.phonenumber);
 		password = (EditText) findViewById(R.id.password);
-
+		saveInfo = (CheckBox)findViewById(R.id.saveUserInfo);
+		
+		Map<String, String> map = UserLoginServer.getSaveUserInfo(getApplicationContext());
+		
+		if (map!=null) {
+			phonenumber.setText(map.get("username"));
+			password.setText(map.get("password"));
+		}
+		
+		/*
+		 * 登陆事件
+		 */
 		submit.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				String account = phonenumber.getText().toString();
-				String psw = password.getText().toString();
+				String account = phonenumber.getText().toString().trim();
+				String psw = password.getText().toString().trim();
 				
 //				if(TextUtils.isEmpty(account)||TextUtils.isEmpty(psw)){
 //					Toast.makeText(LoginActivity.this, "用户名或密码不能为空", Toast.LENGTH_SHORT).show();
 //				}else{
 //					dologing(account,psw);
 //				}
+//				
+				if (saveInfo.isChecked()) {
+					Log.d("success", "save username and password");
+					boolean result = UserLoginServer.saveUserInfo(getApplicationContext(),account,psw);
+					if(result)
+					{
+						Toast.makeText(getApplicationContext(), "SUCCESS", 2000).show();
+					}
+				}
+				
+				
 				startActivity(new Intent(LoginActivity.this,MainActivity.class));
 				finish();
 			}

@@ -98,4 +98,13 @@
             android:text="忘记密码？" />
     </RelativeLayout>
 
+    <CheckBox
+        android:id="@+id/saveUserInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/login_signin"
+        android:layout_below="@+id/login_signin"
+        android:checked="true"
+        android:text="保存密码" />
+
 </RelativeLayout>

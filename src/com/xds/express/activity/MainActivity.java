@@ -8,7 +8,6 @@ import android.R.layout;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.LocalActivityManager;
-import android.app.Notification.Action;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
@@ -36,6 +35,7 @@ import com.xds.express.*;
 import com.xds.express.adapter.IndexPagerAdapter;
 import com.xds.express.fragment.*;
 
+@SuppressWarnings("deprecation")
 public class MainActivity extends FragmentActivity{
 
 
