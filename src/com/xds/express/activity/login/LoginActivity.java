@@ -42,6 +42,9 @@ import android.widget.Toast;
 
 public class LoginActivity extends BaseActivity {
 
+	/*
+	 * 2016年2月22日19:25:28 添加test
+	 */
 	Button sign, submit;
 	EditText phonenumber, password;
 	CheckBox saveInfo;
