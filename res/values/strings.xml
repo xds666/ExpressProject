@@ -38,7 +38,7 @@
     <string name="shipping_search_other">查看其它寄件情况</string>
     <string name="shipping_title_tip">填写上门收件信息</string>
     <string name="shipping_title_warm_tip">注意，支付方式为当面支付</string>
-    
+
     <!-- 代收 -->
     <string name="agent_title_txt">查看代收情况</string>
     <string name="agent_tip_txt">请填写代收信息</string>
@@ -62,5 +62,7 @@
 
     <string name="title_activity_index">Index</string>
     <string name="title_activity_setting">SettingActivity</string>
+    <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="title_activity_first_welcome">FirstWelcome</string>
 
 </resources>

@@ -12,6 +12,8 @@ import java.util.Map;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.test.suitebuilder.annotation.Suppress;
 
 /*
@@ -28,7 +30,7 @@ public class UserLoginServer {
 	public static String ADDRESS = "http://xiaodishu.coding.io/index.php/member/login/applogin";
 
 	
-	public UserLoginServer (String sign,String userphone,String password){
+	public UserLoginServer (String userphone,String password,String sign){
 		this.sign = sign;
 		this.userphone = userphone;
 		this.password = password;
@@ -73,38 +75,15 @@ public class UserLoginServer {
 	 * @param password
 	 * @return
 	 */
-	@SuppressLint("SdCardPath")
-	public static boolean saveUserInfo(Context context,String username,String password) {
-		File file = new File(context.getFilesDir(),"info.txt");
-		try {
-			FileOutputStream fos = new FileOutputStream(file);
-			fos.write((username + "###" + password).getBytes());
-			fos.close();
-			return true;
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-			return false;
-		}
+	public static void saveUserInfo(Context context,String username,String password) {
+		
+		SharedPreferences sp  = context.getSharedPreferences("config", Context.MODE_PRIVATE);
+		Editor editor = sp.edit();
+		editor.putString("username", username);
+		editor.putString("password", password);
+		editor.commit();
+		
+
 	}
 	
-	public static Map<String, String> getSaveUserInfo(Context context){
-		File file = new File(context.getFilesDir(),"info.txt");
-		
-		try {
-			FileInputStream fis = new FileInputStream(file);
-			BufferedReader br = new BufferedReader(new InputStreamReader(fis));
-			String str = br.readLine();
-			String[] infos = str.split("###");
-			Map<String, String> map = new HashMap<String, String>();
-			map.put("username", infos[0]);
-			map.put("password", infos[1]);
-			return map;
-			
-		} catch (Exception e) {
-			// TODO 自动生成的 catch 块
-			e.printStackTrace();
-			return null;
-		}
-	}
 }

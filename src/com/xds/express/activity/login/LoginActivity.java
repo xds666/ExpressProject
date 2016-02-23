@@ -26,7 +26,9 @@ import android.os.Handler;
 import android.os.Message;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.text.TextUtils;
 import android.util.Base64;
 import android.util.DisplayMetrics;
@@ -42,9 +44,7 @@ import android.widget.Toast;
 
 public class LoginActivity extends BaseActivity {
 
-	/*
-	 * 2016年2月22日19:25:28 添加test
-	 */
+	
 	Button sign, submit;
 	EditText phonenumber, password;
 	CheckBox saveInfo;
@@ -60,12 +60,18 @@ public class LoginActivity extends BaseActivity {
 		password = (EditText) findViewById(R.id.password);
 		saveInfo = (CheckBox)findViewById(R.id.saveUserInfo);
 		
-		Map<String, String> map = UserLoginServer.getSaveUserInfo(getApplicationContext());
+		/*
+		 * 读取数据并且填充账号密码
+		 */
+		SharedPreferences sp = getSharedPreferences("config", MODE_PRIVATE);
+		String username = sp.getString("username", "");
+		String password2 = sp.getString("password", "");
 		
-		if (map!=null) {
-			phonenumber.setText(map.get("username"));
-			password.setText(map.get("password"));
-		}
+		phonenumber.setText(username);
+		password.setText(password2);
+		
+		
+
 		
 		/*
 		 * 登陆事件
@@ -77,24 +83,24 @@ public class LoginActivity extends BaseActivity {
 				String account = phonenumber.getText().toString().trim();
 				String psw = password.getText().toString().trim();
 				
-//				if(TextUtils.isEmpty(account)||TextUtils.isEmpty(psw)){
-//					Toast.makeText(LoginActivity.this, "用户名或密码不能为空", Toast.LENGTH_SHORT).show();
-//				}else{
-//					dologing(account,psw);
-//				}
-//				
+				if(TextUtils.isEmpty(account)||TextUtils.isEmpty(psw)){
+					Toast.makeText(LoginActivity.this, "用户名或密码不能为空", Toast.LENGTH_SHORT).show();
+				}else{
+					dologing(account,psw);
+				}
+				/*
+				 * 保存账号密码
+				 */
 				if (saveInfo.isChecked()) {
+					UserLoginServer.saveUserInfo(getApplicationContext(),account,psw);
+					
 					Log.d("success", "save username and password");
-					boolean result = UserLoginServer.saveUserInfo(getApplicationContext(),account,psw);
-					if(result)
-					{
-						Toast.makeText(getApplicationContext(), "SUCCESS", 2000).show();
-					}
+					Toast.makeText(LoginActivity.this, "SUCCESS", 2000).show();
 				}
 				
 				
-				startActivity(new Intent(LoginActivity.this,MainActivity.class));
-				finish();
+//				startActivity(new Intent(LoginActivity.this,MainActivity.class));
+//				finish();
 			}
 		});
 		sign.setOnClickListener(new OnClickListener() {
@@ -113,6 +119,9 @@ public class LoginActivity extends BaseActivity {
 			public void HttpResult(boolean isSuccess, String json) {
 				if (isSuccess) {
 					Log.i("wsy",json);
+					Toast.makeText(LoginActivity.this, "登陆成功", Toast.LENGTH_SHORT).show();
+					startActivity(new Intent(LoginActivity.this, MainActivity.class));
+					LoginActivity.this.finish();
 				}else{
 					Toast.makeText(LoginActivity.this, json, Toast.LENGTH_SHORT).show();
 				}

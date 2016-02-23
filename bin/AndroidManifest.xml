@@ -33,10 +33,12 @@
         android:theme="@style/AppTheme" >
 
         <!-- 地图服务key -->
-        <service android:name="com.amap.api.location.APSService"></service>
+        <service android:name="com.amap.api.location.APSService" >
+        </service>
+
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="365f5da201fca761f66cd0c969bf2c24" >
+            android:value="365f5da201fca761f66cd0c969bf2c24" >
         </meta-data>
 
         <activity
@@ -48,7 +50,7 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>
             -->
         </activity>
         <activity android:name=".activity.AgentActivity" />
@@ -92,18 +94,26 @@
         </activity>
         <activity android:name=".activity.SettingSafeNextActivity" >
         </activity>
-        <activity android:name="com.xds.express.activity.login.LoginActivity" >
+        <activity android:name=".activity.login.LoginActivity" >
+        </activity>
+        <activity android:name=".activity.login.Register" >
+        </activity>
+        <activity android:name=".activity.login.Register2" >
+        </activity>
+        <activity android:name=".activity.login.Register3" >
+        </activity>
+        <activity
+            android:name=".welcome.Welcome"
+            android:label="@string/title_activity_welcome" >
+        </activity>
+        <activity
+            android:name=".welcome.FirstWelcome"
+            android:label="@string/title_activity_first_welcome" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name="com.xds.express.activity.login.Register" >
-        </activity>
-        <activity android:name="com.xds.express.activity.login.Register2" >
-        </activity>
-        <activity android:name="com.xds.express.activity.login.Register3" >
         </activity>
     </application>
 
