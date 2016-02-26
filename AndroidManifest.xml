@@ -42,16 +42,16 @@
         </meta-data>
 
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".activity.login.LoginActivity"
             android:label="@string/app_name" >
 
-            <!--
+            
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            -->
+            
         </activity>
         <activity android:name=".activity.AgentActivity" />
         <activity android:name=".activity.SearchAgentOtherActivity" >
@@ -94,8 +94,7 @@
         </activity>
         <activity android:name=".activity.SettingSafeNextActivity" >
         </activity>
-        <activity android:name=".activity.login.LoginActivity" >
-        </activity>
+ 
         <activity android:name=".activity.login.Register" >
         </activity>
         <activity android:name=".activity.login.Register2" >

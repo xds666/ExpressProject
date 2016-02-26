@@ -23,9 +23,9 @@ import android.test.suitebuilder.annotation.Suppress;
 public class UserLoginServer {
 
 	//请求参数必须为公有属性
-	public String userphone;
-	public String password;
-	public String sign;
+	private String userphone;
+	private String password;
+	private String sign;
 	
 	public static String ADDRESS = "http://xiaodishu.coding.io/index.php/member/login/applogin";
 

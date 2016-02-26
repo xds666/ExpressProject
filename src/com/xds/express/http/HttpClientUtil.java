@@ -1,6 +1,9 @@
 package com.xds.express.http;
 
 import java.lang.reflect.Field;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -22,13 +25,22 @@ public class HttpClientUtil {
     //Base
     private static final int TIME_OUT = 15000;
     private static AsyncHttpClient mClient;
+    private static ExecutorService threadPol;//线程池
 
     private  static AsyncHttpClient checkHttpClient() {
         if (mClient == null) {
             mClient = new AsyncHttpClient();
             mClient.setTimeout(TIME_OUT);
+            mClient.setThreadPool((ThreadPoolExecutor) getThreaService());
         }
         return mClient;
+    }
+    
+    private static ExecutorService getThreaService(){
+    	if (threadPol == null) {
+			threadPol = Executors.newFixedThreadPool(5);
+		}
+    	return threadPol;
     }
 
     public static void httpPost(Context contxt, String url, Object obj, HttpResponseResult listener) {
@@ -83,11 +95,13 @@ public class HttpClientUtil {
     private static RequestParams switchToParams(Object obj) {
         RequestParams params = new RequestParams();
         //解析数据
-        Field[] fields = obj.getClass().getFields();
+        Field[] fields = obj.getClass().getDeclaredFields();
         // 开始转换每一个public类型的变量
         for (int i = 0; i < fields.length; i++) {
             try {
                 Field field = fields[i];
+                //私有必须设置这个属性
+                field.setAccessible(true);
                 if (field.getType() == String.class) {
                     // 属性值为null, 用空字符串取代
                     String value = ((field.get(obj) == null) ? "" : String
