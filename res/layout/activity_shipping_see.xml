@@ -110,25 +110,45 @@
         android:layout_below="@id/shipping_personal_data_layout"
         android:layout_marginTop="10dp"
         android:orientation="vertical" >
+        
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/project_color_bg"
-            android:padding="10dp" >
-
+            android:layout_height="100dp"
+            android:layout_width="fill_parent"
+            android:background="@color/project_color_bg">
+            
             <TextView
+                android:id="@+id/arrive_time_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:text="@string/arrive_time" />
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/arrive_time"
+                android:textColor="#000000"
+                android:textSize="18sp" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/arrive_date"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_alignLeft="@+id/arrive_time"
                 android:layout_alignParentRight="true"
-                android:text="2015年11月11日 >" />
-        </RelativeLayout>
+                android:layout_marginTop="20dp"
+                android:background="@null"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+                
+            <Spinner
+                android:id="@+id/arrive_time"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/arrive_date"
+                android:layout_toRightOf="@+id/arrive_time_tv"
+                android:background="@null" />
+
+            </RelativeLayout>
+         
 
     </LinearLayout>
 

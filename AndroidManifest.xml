@@ -50,8 +50,7 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            
+            </intent-filter>
         </activity>
         <activity android:name=".activity.AgentActivity" />
         <activity android:name=".activity.SearchAgentOtherActivity" >
@@ -73,6 +72,9 @@
         <activity android:name=".activity.ExpressCompanyActivity" >
         </activity>
         <activity android:name=".activity.ServiceActivity" >
+        </activity>
+        <activity android:name=".activity.MainActivity">
+            
         </activity>
         <activity android:name=".activity.CurrentExpressMenuActivity" >
         </activity>

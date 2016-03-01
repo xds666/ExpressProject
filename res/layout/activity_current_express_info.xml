@@ -107,37 +107,43 @@
      
    			  <RelativeLayout 
                  android:id="@+id/time_rl"
-                 android:layout_height="70dp"
+                 android:layout_height="100dp"
                  android:layout_width="fill_parent"
                  android:background="@color/project_color_bg"
                  android:layout_below="@+id/dorm_tv">
                  
-                 <TextView
-                     android:id="@+id/time_tv"
-                     android:layout_height="wrap_content"
-                     android:layout_width="wrap_content"
-                     android:layout_marginLeft="30dp"
-                     android:layout_centerVertical="true"
-                     android:text="@string/arrive_time"
-                     android:textSize="20sp"/>
-         
-                 <ImageView 
-                     android:id="@+id/image1"
-                     android:layout_height="20dp"
-                     android:layout_width="20dp"
-                     android:background="@drawable/more1"
-                     android:layout_centerVertical="true"
-                     android:layout_alignParentRight="true"
-                     android:layout_marginRight="20dp"/>
-         
-                 <TextView 
-                     android:id="@+id/time"
-                     android:layout_height="wrap_content"
-                     android:layout_width="wrap_content"
-                     android:layout_toLeftOf="@+id/image1"
-                     android:layout_centerVertical="true"
-                     android:text="today"
-                     android:textSize="20sp"/>
+   			      
+              	  <TextView
+              	      
+                      android:id="@+id/pick_time_tv"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentLeft="true"
+                      android:layout_marginLeft="40dp"
+                      android:layout_marginTop="20dp"
+                      android:text="@string/arrive_time"
+                      android:textColor="#000000"
+                      android:textSize="18sp" />
+
+                  <TextView
+                      android:id="@+id/pick_date"
+                      android:layout_width="fill_parent"
+                      android:layout_height="30dp"
+                      android:layout_alignParentRight="true"
+                      android:layout_marginTop="20dp"
+                      android:layout_marginLeft="10dp"
+                      android:layout_toRightOf="@+id/pick_time_tv"
+                      android:textColor="#000000"
+                      android:textSize="18dp"
+                   	  android:background="@null" />
+                
+                  <Spinner 
+                      android:id="@+id/pick_time"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/pick_date"
+                      android:background="@null"
+                      android:layout_alignLeft="@id/pick_date"/>
          
    			  </RelativeLayout>
      
