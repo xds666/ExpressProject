@@ -12,6 +12,7 @@ import com.xds.express.R.layout;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.opengl.Visibility;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -19,9 +20,14 @@ import android.text.format.Time;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.TextureView;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
+import android.view.ViewGroup.OnHierarchyChangeListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.RelativeLayout;
@@ -33,9 +39,13 @@ public class CurrentExpressInfoActivity extends BaseActivity {
 	
 	private Button submit;
 	private TextView status,pick_date;
-	private Spinner pick_time;
+	private Spinner pick_time,pick_way;
+	private RelativeLayout time_rl;
 	private String time[] = new String[]{"09:00--10:30","10:30--12:00","14:00--15:30","15:30--17:00"};
+	private String pick_ways[] = new String[]{"自取","上门","代领"};
 	
+	
+	private String str;
 	private int mYear;    
     private int mMonth;  
     private int mDay;
@@ -54,6 +64,29 @@ public class CurrentExpressInfoActivity extends BaseActivity {
 		status = (TextView)findViewById(R.id.status_tv);
 		pick_date = (TextView)findViewById(R.id.pick_date);
 		pick_time = (Spinner)findViewById(R.id.pick_time);
+		pick_way = (Spinner)findViewById(R.id.pick_way);
+		time_rl = (RelativeLayout)findViewById(R.id.time_rl);
+		
+		
+		time_rl.setVisibility(View.INVISIBLE);
+		
+		pick_way.setOnHierarchyChangeListener(new OnHierarchyChangeListener() {
+			
+			@Override
+			public void onChildViewRemoved(View parent, View child) {
+				// TODO 自动生成的方法存根
+				
+			}
+			
+			@Override
+			public void onChildViewAdded(View parent, View child) {
+				// TODO 自动生成的方法存根
+				
+			}
+		});
+	
+		
+		
 		
 		initializeViews();
 		
@@ -65,6 +98,7 @@ public class CurrentExpressInfoActivity extends BaseActivity {
 		setDateTime();
 		
 		setTime(pick_time);
+		setWay(pick_way);
 	}
 
 
@@ -141,6 +175,17 @@ public class CurrentExpressInfoActivity extends BaseActivity {
 			spinner.setAdapter(simpleAdapter);
 			
 			
+		}
+		
+		private void setWay(Spinner spinner){
+			List<Map<String, Object>> wayItems = new ArrayList<Map<String,Object>>();
+			for (int i = 0; i < pick_ways.length; i++) {
+				Map<String, Object> wayItem = new HashMap<String, Object>();
+				wayItem.put("pick_way", pick_ways[i]);
+				wayItems.add(wayItem);
+				SimpleAdapter simpleAdapter = new SimpleAdapter(this, wayItems, R.layout.item_way, new String[]{"pick_way"}, new int[]{R.id.way});
+				spinner.setAdapter(simpleAdapter);
+			}
 		}
 		
 		Handler dateandtimeHandler = new Handler() {  

@@ -86,7 +86,7 @@ public class LoginActivity extends BaseActivity {
 				if(TextUtils.isEmpty(account)||TextUtils.isEmpty(psw)){
 					Toast.makeText(LoginActivity.this, "用户名或密码不能为空", Toast.LENGTH_SHORT).show();
 				}else{
-					dologing(account,psw);
+//					dologing(account,psw);
 				}
 				/*
 				 * 保存账号密码
@@ -99,8 +99,8 @@ public class LoginActivity extends BaseActivity {
 				}
 				
 				
-//				startActivity(new Intent(LoginActivity.this,MainActivity.class));
-//				finish();
+				startActivity(new Intent(LoginActivity.this,MainActivity.class));
+ 				finish();
 			}
 		});
 		sign.setOnClickListener(new OnClickListener() {

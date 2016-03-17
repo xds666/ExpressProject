@@ -2,15 +2,9 @@ package com.xds.express.adapter;
 
 import java.util.List;
 
-
-
-
-
-
-
-import com.xds.express.Express;
 import com.xds.express.R;
 import com.xds.express.activity.CurrentExpressMenuActivity;
+import com.xds.express.bean.ExpressBean;
 import com.xds.express.widget.ExpressItem;
 
 import android.content.Context;
@@ -23,10 +17,10 @@ import android.widget.TextView;
 public class CurrentExpressMenuAdapter extends BaseAdapter {
 
 	private LayoutInflater mInflater;
-	List<Express> mData = null;
+	List<ExpressBean> mData = null;
 	
 	
-	public CurrentExpressMenuAdapter(Context mcontext,List<Express> mData) {
+	public CurrentExpressMenuAdapter(Context mcontext,List<ExpressBean> mData) {
 		mInflater = LayoutInflater.from(mcontext);
 		this.mData = mData;
 		
@@ -40,7 +34,7 @@ public class CurrentExpressMenuAdapter extends BaseAdapter {
 	}
 
 	@Override
-	public Express getItem(int position) {
+	public ExpressBean getItem(int position) {
 		// TODO 自动生成的方法存根
 		return mData.get(position);
 	}

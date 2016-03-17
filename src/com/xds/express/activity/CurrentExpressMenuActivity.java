@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-import com.xds.express.Express;
+
+
 import com.xds.express.R;
 import com.xds.express.R.id;
 import com.xds.express.R.layout;
 import com.xds.express.adapter.CurrentExpressMenuAdapter;
+import com.xds.express.bean.ExpressBean;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -35,7 +37,7 @@ private String[] company_name = {"申通"};
 	private int num = 3;	//快递数量
 	private ListView express_menu;					
 	private CurrentExpressMenuAdapter adapter;	
-	private List<Express> mData=new ArrayList<Express>();	
+	private List<ExpressBean> mData=new ArrayList<ExpressBean>();	
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -67,7 +69,7 @@ private String[] company_name = {"申通"};
 	public void initData(){
 		for(int i=0;i<num;i++)
 		{
-			Express item = new Express(company_name[0], pick_way[0], status[i]);
+			ExpressBean item = new ExpressBean(company_name[0], pick_way[0], status[i]);
 			Log.i("test", "num"+i);
 			mData.add(item);
 		}

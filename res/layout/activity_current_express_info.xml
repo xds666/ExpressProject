@@ -105,12 +105,56 @@
                  android:text="G114"
                  android:textSize="20sp"/>
      
+   			  
+   			  
+   			  <RelativeLayout
+   			       android:id="@+id/pick_way_rl"
+   			       android:layout_width="fill_parent"
+   			       android:layout_height="70dp"
+   			       android:background="@color/project_color_bg"
+   			       android:layout_below="@+id/dorm_tv">
+                 
+         
+                 <TextView 
+                     android:id="@+id/pick_way_tv"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_centerVertical="true"
+                     android:layout_marginLeft="30dp"
+                     android:text="@string/picking_way"
+                     android:textSize="20sp"/>
+         
+                 <ImageView 
+                     android:id="@+id/image2"
+                     android:layout_height="20dp"
+                     android:layout_width="20dp"
+                     android:background="@drawable/more1"
+                     android:layout_centerVertical="true"
+                     android:layout_alignParentRight="true"
+                     android:layout_marginRight="20dp"/>
+         
+                 <Spinner
+                     android:id="@+id/pick_way"
+                     android:layout_width="wrap_content"
+                     android:layout_height="fill_parent"
+                     android:layout_toLeftOf="@+id/image2"
+                     android:layout_toRightOf="@+id/pick_way_tv"
+                     android:background="@null"
+                     android:layout_margin="15dp"
+                     android:paddingLeft="20dp"
+                     android:textSize="20sp" />
+
+   			  </RelativeLayout>
+   			  
+   			  
+   			  
    			  <RelativeLayout 
                  android:id="@+id/time_rl"
                  android:layout_height="100dp"
                  android:layout_width="fill_parent"
                  android:background="@color/project_color_bg"
-                 android:layout_below="@+id/dorm_tv">
+                 android:layout_below="@+id/pick_way_rl">
+                 
                  
    			      
               	  <TextView
@@ -147,41 +191,7 @@
          
    			  </RelativeLayout>
      
-   			  <RelativeLayout
-   			       android:id="@+id/pick_way_rl"
-   			       android:layout_width="fill_parent"
-   			       android:layout_height="70dp"
-   			       android:background="@color/project_color_bg"
-   			       android:layout_below="@+id/time_rl">
-                 
-         
-                 <TextView 
-                     android:id="@+id/pick_way_tv"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:layout_centerVertical="true"
-                     android:layout_marginLeft="30dp"
-                     android:text="@string/picking_way"
-                     android:textSize="20sp"/>
-         
-                 <ImageView 
-                     android:id="@+id/image2"
-                     android:layout_height="20dp"
-                     android:layout_width="20dp"
-                     android:background="@drawable/more1"
-                     android:layout_centerVertical="true"
-                     android:layout_alignParentRight="true"
-                     android:layout_marginRight="20dp"/>
-         
-                 <TextView 
-                     android:id="@+id/pick_way"
-                     android:layout_height="wrap_content"
-                     android:layout_width="wrap_content"
-                     android:layout_toLeftOf="@+id/image2"
-                     android:layout_centerVertical="true"
-                     android:text="自取"
-                     android:textSize="20sp"/>
-   			  </RelativeLayout>
+   			  
      
      
    			  <Button 
@@ -189,10 +199,11 @@
    			      android:id="@+id/submit"
    			      android:layout_width="200dp"
    			      android:layout_height="wrap_content"
-   			      android:layout_below="@+id/pick_way_rl"
    			      android:layout_alignParentRight="true"
    			      android:layout_marginRight="20dp"
-   			      android:layout_marginTop="20dp"
+   			      android:layout_marginTop="50dp"
+   			      android:layout_below="@+id/time_rl"
+   			      android:layout_alignParentBottom="true"
    			      android:text="@string/btn_submit_txt"
    			      android:textSize="20sp"/>
              

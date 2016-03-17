@@ -63,9 +63,9 @@ public abstract class HttpResponseResult implements HttpUIControl {
 				HttpResult(false, rspReason);
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
 			json = e.getMessage().toString();
 			HttpResult(false, json);
+			e.printStackTrace();
 		}
 	}
 
